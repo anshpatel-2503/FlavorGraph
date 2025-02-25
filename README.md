@@ -6,16 +6,18 @@ FlavorGraph is a Python web application designed to help users discover and sear
 
 ```
 FlavorGraph/
-├── backend/
-│   ├── main.py            # FastAPI backend code
-│   ├── recipes.csv        # CSV file containing recipes
-│   ├── requirements.txt   # Dependencies for the backend
-├── frontend/
-│   ├── index.html         # Main HTML file
-│   ├── styles.css         # CSS for styling
-│   ├── script.js          # JavaScript for API interactions
-├── .gitignore             # Git ignore file
-└── README.md              # Instructions for running the project
+├── backend/                     # Backend directory (FastAPI application)
+│   ├── __pycache__/             # Compiled Python files (auto-generated)
+│   ├── static/                  # Static files (CSS, images, etc.)
+│       ├── styles.css           # CSS file for backend-related styling
+│   ├── __init__.py              # Marks this directory as a Python package
+│   ├── main.py                  # FastAPI application entry point
+│   ├── recipes.csv              # CSV file containing recipe data
+├── frontend/                    # Frontend directory (Static website)
+│   ├── index.html               # Main HTML file for the frontend
+├── .gitignore                   # Git ignore file (ignore unnecessary files)
+├── README.md                    # Instructions for running the project
+
 ```
 
 ## Requirements and Dependencies
@@ -43,7 +45,7 @@ FlavorGraph/
 
 1. Start the FastAPI server:
    ```
-   uvicorn main:app --reload
+   uvicorn backend.main:app --reload
    ```
 
 2. Open your browser and navigate to `http://127.0.0.1:8000`.
